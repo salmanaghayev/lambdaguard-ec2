@@ -1,5 +1,8 @@
 resource "aws_iam_user" "LG_Usr" {
   name = "LambdaGuardUser"
+  tags = {
+    Name = "LG-User"
+  }
 }
 
 resource "aws_iam_access_key" "LG_Usr_Key01" {
