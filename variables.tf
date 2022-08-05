@@ -12,11 +12,22 @@ variable "domain_name" {
 variable "SSH_HTTP_Allowed_IPs" {
   type        = list
   description = "Whitelisted IPs for SSH and HTTP access to EC2"
-  default     = ["10.0.0.238/32"]
+  default     = ["1.1.1.1/32"]
 }
 
+variable "LG_VPC_CIDR" {
+  description = "LG VPC CIDR block"
+  default     = "10.0.0.0/16"
+}
+variable "LG_VPC_subnet_1" {
+  description = "LG VPC Subnet1 CIDR block"
+  default     = "10.0.0.0/24"
+}
+variable "LG_VPC_subnet_2" {
+  description = "LG VPC Subnet1 CIDR block"
+  default     = "10.0.1.0/24"
+}
 variable "Any_IPs" {
-  #type        = list
   description = "Any IP address"
   default     = "0.0.0.0/0"
 }
